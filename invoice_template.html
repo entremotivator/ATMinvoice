@@ -1,429 +1,217 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <style type="text/css">
-        ol {
+        * {
             margin: 0;
-            padding: 0
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        table td,
-        table th {
-            padding: 0
-        }
-
-        .c9 {
-            border-right-style: dotted;
-            padding: 5pt 5pt 5pt 5pt;
-            border-bottom-color: #000000;
-            border-top-width: 1pt;
-            border-right-width: 1pt;
-            border-left-color: #000000;
-            vertical-align: top;
-            border-right-color: #000000;
-            border-left-width: 1pt;
-            border-top-style: dotted;
-            border-left-style: dotted;
-            border-bottom-width: 1pt;
-            width: 147.8pt;
-            border-top-color: #000000;
-            border-bottom-style: dotted
-        }
-
-        .c3 {
-            border-right-style: dotted;
-            padding: 5pt 5pt 5pt 5pt;
-            border-bottom-color: #000000;
-            border-top-width: 1pt;
-            border-right-width: 1pt;
-            border-left-color: #000000;
-            vertical-align: top;
-            border-right-color: #000000;
-            border-left-width: 1pt;
-            border-top-style: dotted;
-            border-left-style: dotted;
-            border-bottom-width: 1pt;
-            width: 302.2pt;
-            border-top-color: #000000;
-            border-bottom-style: dotted
-        }
-
-        .c8 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.15;
-            orphans: 2;
-            widows: 2;
-            text-align: center;
-            height: 11pt
-        }
-
-        .c10 {
+        body {
+            font-family: Arial, sans-serif;
             color: #000000;
-            font-weight: 700;
-            text-decoration: none;
-            vertical-align: baseline;
-            font-size: 11pt;
-            font-family: "Arial";
-            font-style: italic
-        }
-
-        .c0 {
-            color: #000000;
-            font-weight: 400;
-            text-decoration: none;
-            vertical-align: baseline;
-            font-size: 11pt;
-            font-family: "Arial";
-            font-style: normal
-        }
-
-        .c13 {
-            color: #000000;
-            font-weight: 400;
-            text-decoration: none;
-            vertical-align: baseline;
-            font-size: 18pt;
-            font-family: "Arial";
-            font-style: normal
-        }
-
-        .c1 {
-            color: #000000;
-            font-weight: 700;
-            text-decoration: none;
-            vertical-align: baseline;
-            font-size: 11pt;
-            font-family: "Arial";
-            font-style: normal
-        }
-
-        .c4 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.15;
-            orphans: 2;
-            widows: 2;
-            text-align: left;
-            height: 11pt
-        }
-
-        .c7 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.15;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        .c14 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.15;
-            orphans: 2;
-            widows: 2;
-            text-align: center
-        }
-
-        .c17 {
-            font-weight: 400;
-            text-decoration: none;
-            vertical-align: baseline;
-            font-family: "Arial";
-            font-style: normal
-        }
-
-        .c11 {
-            text-decoration-skip-ink: none;
-            font-size: 9pt;
-            -webkit-text-decoration-skip: none;
-            color: #1155cc;
-            text-decoration: underline
-        }
-
-        .c2 {
-            padding-top: 0pt;
-            padding-bottom: 0pt;
-            line-height: 1.0;
-            text-align: left
-        }
-
-        .c16 {
-            margin-left: auto;
-            border-spacing: 0;
-            border-collapse: collapse;
-            margin-right: auto
-        }
-
-        .c18 {
             background-color: #ffffff;
-            max-width: 451.4pt;
-            padding: 72pt 72pt 72pt 72pt
+            /* Made full width page layout */
+            width: 100%;
+            padding: 40px 60px;
         }
 
-        .c5 {
-            color: inherit;
-            text-decoration: inherit
+        .header-bar {
+            width: 100%;
+            height: 20px;
+            background: {{ color }};
+            margin-bottom: 30px;
         }
 
-        .c6 {
-            color: #b7b7b7;
-            font-size: 9pt
+        .company-info {
+            margin-bottom: 40px;
         }
 
-        .c12 {
-            height: 0pt
-        }
-
-        .c15 {
-            font-weight: 700
-        }
-
-        .title {
-            padding-top: 0pt;
-            color: #000000;
-            font-size: 26pt;
-            padding-bottom: 3pt;
-            font-family: "Arial";
-            line-height: 1.15;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        .subtitle {
-            padding-top: 0pt;
-            color: #666666;
-            font-size: 15pt;
-            padding-bottom: 16pt;
-            font-family: "Arial";
-            line-height: 1.15;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        li {
-            color: #000000;
+        .company-info p {
+            line-height: 1.6;
             font-size: 11pt;
-            font-family: "Arial"
         }
 
-        p {
-            margin: 0;
-            color: #000000;
-            font-size: 11pt;
-            font-family: "Arial"
-        }
-
-        h1 {
-            padding-top: 20pt;
-            color: #000000;
-            font-size: 20pt;
-            padding-bottom: 6pt;
-            font-family: "Arial";
-            line-height: 1.15;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h2 {
-            padding-top: 18pt;
-            color: #000000;
-            font-size: 16pt;
-            padding-bottom: 6pt;
-            font-family: "Arial";
-            line-height: 1.15;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h3 {
-            padding-top: 16pt;
-            color: #434343;
-            font-size: 14pt;
-            padding-bottom: 4pt;
-            font-family: "Arial";
-            line-height: 1.15;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h4 {
-            padding-top: 14pt;
-            color: #666666;
-            font-size: 12pt;
-            padding-bottom: 4pt;
-            font-family: "Arial";
-            line-height: 1.15;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h5 {
-            padding-top: 12pt;
-            color: #666666;
-            font-size: 11pt;
-            padding-bottom: 4pt;
-            font-family: "Arial";
-            line-height: 1.15;
-            page-break-after: avoid;
-            orphans: 2;
-            widows: 2;
-            text-align: left
-        }
-
-        h6 {
-            padding-top: 12pt;
-            color: #666666;
-            font-size: 11pt;
-            padding-bottom: 4pt;
-            font-family: "Arial";
-            line-height: 1.15;
-            page-break-after: avoid;
+        .company-name {
+            font-weight: 700;
             font-style: italic;
-            orphans: 2;
-            widows: 2;
-            text-align: left
+            font-size: 11pt;
+        }
+
+        .invoice-header {
+            margin-bottom: 30px;
+        }
+
+        .invoice-header h1 {
+            font-size: 18pt;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .invoice-header p {
+            font-size: 11pt;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+
+        table td {
+            padding: 12px 15px;
+            border: 1pt dotted #000000;
+            font-size: 11pt;
+            vertical-align: top;
+        }
+
+        .label-cell {
+            width: 30%;
+            font-weight: 400;
+        }
+
+        .value-cell {
+            width: 70%;
+        }
+
+        .total-row td {
+            font-weight: 700;
+        }
+
+        .notes-section {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .notes-section h2 {
+            font-size: 11pt;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .notes-section p {
+            font-size: 11pt;
+            line-height: 1.6;
+        }
+
+        .terms-section {
+            margin-top: 30px;
+        }
+
+        .terms-section h2 {
+            font-size: 11pt;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .terms-section p {
+            font-size: 11pt;
+            line-height: 1.6;
+        }
+
+        .footer-bar {
+            width: 100%;
+            height: 20px;
+            background: {{ color }};
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .footer-text {
+            text-align: center;
+            color: #b7b7b7;
+            font-size: 9pt;
         }
     </style>
 </head>
 
-<body class="c18">
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <div style="width:600px; height:20px; background:{{ color }};"></div>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c7"><span>Company </span><span class="c10">{{ company_name }} </span></p>
-    <p class="c7"><span class="c0">4218 Blackwell Street</span></p>
-    <p class="c7"><span class="c0">Anchorage</span></p>
-    <p class="c7"><span class="c0">Alaska</span></p>
-    <p class="c7"><span class="c0">907-334-3873</span></p>
-    <p class="c7"><span class="c0">907-360-5699</span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c4"><span class="c13"></span></p>
-    <p class="c7"><span class="c15">INVOICE #{{ invoice_number }}</span></p>
-    <p class="c7"><span class="c0">Date: {{ invoice_date }}</span></p>
-    <p class="c8"><span class="c0"></span></p><a id="t.6c3f05c178323806ba167d5e21de400017d34d7e"></a><a id="t.0"></a>
-    <table class="c16">
+<body>
+    <div class="header-bar"></div>
+
+    <div class="company-info">
+        <p>Company <span class="company-name">{{ company_name }}</span></p>
+        <p>4218 Blackwell Street</p>
+        <p>Anchorage</p>
+        <p>Alaska</p>
+        <p>907-334-3873</p>
+        <p>907-360-5699</p>
+    </div>
+
+    <div class="invoice-header">
+        <h1>INVOICE #{{ invoice_number }}</h1>
+        <p>Date: {{ invoice_date }}</p>
+        {% if sales_agent and sales_agent != "N/A" %}
+        <p>Sales Agent: {{ sales_agent }}</p>
+        {% endif %}
+    </div>
+
+    <table>
         <tbody>
-            <tr class="c12">
-                <td class="c9" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">CUSTOMER NAME</span></p>
-                </td>
-                <td class="c3" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">{{ customer_name }}</span></p>
-                </td>
+            <tr>
+                <td class="label-cell">CUSTOMER NAME</td>
+                <td class="value-cell">{{ customer_name }}</td>
             </tr>
-            <tr class="c12">
-                <td class="c9" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">CUSTOMER ADDRESS</span></p>
-                </td>
-                <td class="c3" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">{{ customer_address }}</span></p>
-                </td>
+            <tr>
+                <td class="label-cell">CUSTOMER ADDRESS</td>
+                <td class="value-cell">{{ customer_address }}</td>
             </tr>
             {% if customer_email %}
-            <tr class="c12">
-                <td class="c9" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">CUSTOMER EMAIL</span></p>
-                </td>
-                <td class="c3" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">{{ customer_email }}</span></p>
-                </td>
+            <tr>
+                <td class="label-cell">CUSTOMER EMAIL</td>
+                <td class="value-cell">{{ customer_email }}</td>
             </tr>
             {% endif %}
             {% if customer_phone %}
-            <tr class="c12">
-                <td class="c9" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">CUSTOMER PHONE</span></p>
-                </td>
-                <td class="c3" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">{{ customer_phone }}</span></p>
-                </td>
+            <tr>
+                <td class="label-cell">CUSTOMER PHONE</td>
+                <td class="value-cell">{{ customer_phone }}</td>
             </tr>
             {% endif %}
-            <tr class="c12">
-                <td class="c9" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">PRODUCT TYPE</span></p>
-                </td>
-                <td class="c3" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">{{ product_type }}</span></p>
-                </td>
+            <tr>
+                <td class="label-cell">PRODUCT TYPE</td>
+                <td class="value-cell">{{ product_type }}</td>
             </tr>
-            <tr class="c12">
-                <td class="c9" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">QUANTITY</span></p>
-                </td>
-                <td class="c3" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">{{ quantity }}</span></p>
-                </td>
+            <tr>
+                <td class="label-cell">QUANTITY</td>
+                <td class="value-cell">{{ quantity }}</td>
             </tr>
-            <tr class="c12">
-                <td class="c9" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">PRICE PER UNIT ($)</span></p>
-                </td>
-                <td class="c3" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">{{ price_per_unit }}</span></p>
-                </td>
+            <tr>
+                <td class="label-cell">PRICE PER UNIT ($)</td>
+                <td class="value-cell">{{ price_per_unit }}</td>
             </tr>
-            <tr class="c12">
-                <td class="c9" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">SUBTOTAL ($)</span></p>
-                </td>
-                <td class="c3" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">{{ subtotal }}</span></p>
-                </td>
+            <tr>
+                <td class="label-cell">SUBTOTAL ($)</td>
+                <td class="value-cell">{{ subtotal }}</td>
             </tr>
-            <tr class="c12">
-                <td class="c9" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">TAX ({{ tax_rate }}%)</span></p>
-                </td>
-                <td class="c3" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c0">{{ tax_amount }}</span></p>
-                </td>
+            <tr>
+                <td class="label-cell">TAX ({{ tax_rate }}%)</td>
+                <td class="value-cell">{{ tax_amount }}</td>
             </tr>
-            <tr class="c12">
-                <td class="c9" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c1">TOTAL ($)</span></p>
-                </td>
-                <td class="c3" colspan="1" rowspan="1">
-                    <p class="c2"><span class="c1">{{ total }}</span></p>
-                </td>
+            <tr class="total-row">
+                <td class="label-cell">TOTAL ($)</td>
+                <td class="value-cell">{{ total }}</td>
             </tr>
         </tbody>
     </table>
-    <p class="c4"><span class="c0"></span></p>
+
     {% if notes %}
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c7"><span class="c1">NOTES</span></p>
-    <p class="c7"><span class="c0">{{ notes }}</span></p>
+    <div class="notes-section">
+        <h2>NOTES</h2>
+        <p>{{ notes }}</p>
+    </div>
     {% endif %}
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c7"><span class="c1">TERMS AND CONDITIONS</span></p>
-    <p class="c4"><span class="c1"></span></p>
-    <p class="c7"><span class="c0">Payment is due within 15 days.</span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <div style="width:600px; height:20px; background:{{ color }};"></div>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c4"><span class="c0"></span></p>
-    <p class="c14"><span class="c6">Invoice generated by The ATM Agency ©</span></p>
+
+    <div class="terms-section">
+        <h2>TERMS AND CONDITIONS</h2>
+        <p>Payment is due within 15 days.</p>
+    </div>
+
+    <div class="footer-bar"></div>
+    
+    <p class="footer-text">Invoice generated by The ATM Agency ©</p>
 </body>
 
 </html>
